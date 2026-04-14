@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Snake</title>
+    <!-- Google Fonts for modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header: Score & High Score -->
+        <header class="game-header glass-panel">
+            <div class="score-box">
+                <span class="label">SCORE</span>
+                <span id="currentScore" class="value neon-text-blue">0</span>
+            </div>
+            <div class="title-box">
+                <h1 class="neon-text-green">SNAKE</h1>
+            </div>
+            <div class="score-box">
+                <span class="label">HIGH</span>
+                <span id="highScore" class="value neon-text-pink">0</span>
+            </div>
+        </header>
+
+        <!-- Main Game Area -->
+        <main class="game-wrapper">
+            <!-- Glassmorphism Overlays -->
+            <div id="overlay" class="overlay glass-panel active">
+                <h2 id="overlayTitle" class="neon-text-green">SNAKE</h2>
+                <p id="overlayMessage">Swipe or use Arrow Keys to play</p>
+                
+                <div class="difficulty-selector">
+                    <button class="diff-btn active" data-difficulty="easy">Easy</button>
+                    <button class="diff-btn" data-difficulty="medium">Medium</button>
+                    <button class="diff-btn" data-difficulty="hard">Hard</button>
+                </div>
+
+                <button id="startBtn" class="action-btn neon-box-green">START GAME</button>
+            </div>
+
+            <!-- The Game Canvas -->
+            <canvas id="gameCanvas"></canvas>
+            
+            <!-- Pause Indicator -->
+            <div id="pauseIndicator" class="pause-indicator hidden">PAUSED</div>
+        </main>
+
+        <!-- Footer / Instructions -->
+        <footer class="game-footer glass-panel">
+            <p>Controls: Arrow Keys / WASD - Move | Space / Tap - Pause/Resume | Swipe on Mobile</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
